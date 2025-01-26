@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="600.0" styleClass="content" stylesheets="@../styles/App.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hack.in.black.controllers.NewInspectionController">
+   <children>
+      <!-- Titel-->
+      <Label layoutX="245.0" layoutY="14.0" text="New Inspection Log" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+
+      <!--Warehouse
+        Label & ComboBox-->
+      <Label layoutX="140.0" layoutY="72.0" text="Warehouse" />
+      <ComboBox fx:id="comboBoxWarehouse" layoutX="260.0" layoutY="67.0" onAction="#handleComboBoxWarehouseSelection" prefWidth="200.0" />
+
+      <!-- Shipment Label & ComboBox-->
+      <Label layoutX="140.0" layoutY="112.0" text="Shipment" />
+      <ComboBox fx:id="comboBoxShipment" layoutX="260.0" layoutY="107.0" prefWidth="200.0" />
+
+      <!-- Status Label & ComboBox-->
+      <Label layoutX="140.0" layoutY="152.0" text="Result" />
+      <ComboBox fx:id="comboBoxResult" layoutX="260.0" layoutY="147.0" prefWidth="200.0" />
+
+      <!-- Inspector Name Label & TextField-->
+      <Label layoutX="140.0" layoutY="270.0" text="Inspector Name" />
+      <TextField fx:id="textFieldInspectorName" layoutX="260.0" layoutY="265.0" prefWidth="200.0" />
+
+      <!-- Confirm & Back Buttons-->
+      <Button fx:id="confirmButton" layoutX="323.0" layoutY="315.0" onAction="#handleButtonConfirmClickEvent" text="Confirm" />
+      <Button fx:id="backButton" layoutX="213.0" layoutY="315.0" onAction="#handleButtonBackClickEvent" text="Back" />
+      <Label layoutX="140.0" layoutY="190.0" text="Date" />
+      <DatePicker fx:id="datePicker" layoutX="260.0" layoutY="186.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="140.0" layoutY="230.0" text="Time" />
+      <Spinner fx:id="spinnerHour" editable="true" layoutX="260.0" layoutY="226.0" prefHeight="25.0" prefWidth="85.0" />
+      <Spinner fx:id="spinnerMinute" editable="true" layoutX="375.0" layoutY="226.0" prefHeight="25.0" prefWidth="85.0" />
+      <Label layoutX="358.0" layoutY="224.0" text=":">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1800.0" minHeight="400.0" minWidth="600.0" prefHeight="800.0" prefWidth="1300.0" styleClass="root-border-pane" stylesheets="@../styles/App.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hack.in.black.controllers.MainViewController">
+   <top>
+      <MenuBar stylesheets="@../styles/App.css" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="New">
+               <items>
+                  <MenuItem fx:id="menuItemWarehouse" mnemonicParsing="false" onAction="#handleMenuItemWarehouseClickEvent" text="Warehouse" />
+                  <MenuItem fx:id="menuItemShipment" mnemonicParsing="false" onAction="#handleMenuItemShipmentClickEvent" text="Shipment" />
+                  <MenuItem fx:id="menuItemInspection" mnemonicParsing="false" onAction="#handleMenuItemInspectionClickEvent" text="Inspection" />
+                  <MenuItem fx:id="menuItemShipmentLog" mnemonicParsing="false" onAction="#handleMenuItemShipmentLogClickEvent" text="Shipment Log" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="menuItemLoadTestData" mnemonicParsing="false" onAction="#handleMenuItemLoadTestDataClickEvent" text="Load test data" />
+                  <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#handleMenuItemAboutClickEvent" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox styleClass="navigation" stylesheets="@../styles/App.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Viking Express">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label text="Logistics Manager">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <Button fx:id="buttonWarehouses" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleButtonWarehousesClickEvent" text="Warehouses">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="buttonShipments" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleButtonShipmentsClickEvent" text="Shipments">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="buttonInspections" minHeight="30.0" minWidth="120.0" mnemonicParsing="false" onAction="#handleButtonInspectionsClickEvent" text="Inspections">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane fx:id="scrollPaneContent" fitToWidth="true" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/App.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,69 @@
+/* BORDER PANE */
+.root-border-pane {
+    background-color: #e0e0e0;
+    -fx-background-color: #e0e0e0;
+}
+
+/* MENU BAR */
+.menu-bar {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0 0 10 10;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}
+
+/* NAVIGATION */
+.navigation {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-alignment: top_center;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}
+
+.icon {
+    -fx-image: url('../images/icon64.png');
+    -fx-alignment: center;
+}
+
+Button {
+    background-color: #FFFFFF;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    font-size: 1.1em;
+    -fx-font-size: 1.1em;
+    -fx-aligmnet: center;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 3, 0, 0, 2);
+}
+
+.selected {
+    background-color: #1C2747;
+    -fx-background-color: #1C2747;
+    -fx-text-fill: white;
+}
+
+Button:hover {
+    background-color: #737681;
+    -fx-background-color: #737681;
+    -fx-text-fill: white;
+    cursor: hand;
+    -fx-cursor: hand;
+}
+
+/* MAIN CONTENT */
+.scroll-pane {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.content {
+    background-color: #FFFFFF;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}

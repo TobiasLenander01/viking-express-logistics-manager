@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" styleClass="content" stylesheets="@../styles/App.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hack.in.black.controllers.NewWarehouseController">
+  <children>
+    <!-- Titel-->
+    <Label layoutX="245.0" layoutY="14.0" text="New Warehouse" textAlignment="CENTER">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+
+    <!--Name
+    Label & TextField-->
+    <Label layoutX="140.0" layoutY="67.0" text="Name" />
+    <TextField fx:id="textFieldName" layoutX="260.0" layoutY="63.0" prefWidth="200.0" />
+
+    <!-- Address Label & TextField-->
+    <Label layoutX="140.0" layoutY="107.0" text="Address" />
+    <TextField fx:id="textFieldAddress" layoutX="260.0" layoutY="103.0" prefWidth="200.0" />
+
+    <!-- Capcity Label & TextField-->
+    <Label layoutX="140.0" layoutY="147.0" text="Capacity" />
+
+    <!-- Region Label & ComboBox-->
+    <Label layoutX="140.0" layoutY="187.0" text="Region" />
+    <ComboBox fx:id="comboBoxRegion" layoutX="260.0" layoutY="187.0" prefWidth="200.0" />
+
+    <!-- Confirm & Back Buttons-->
+    <Button fx:id="buttonAddNewWarehouse" layoutX="320.0" layoutY="240.0" onAction="#handleButtonAddNewWarehouseClickEvent" text="Confirm" />
+    <Button fx:id="buttonBack" layoutX="210.0" layoutY="240.0" onAction="#handleButtonBackClickEvent" text="Back" />
+      <Spinner fx:id="spinnerCapacity" editable="true" layoutX="260.0" layoutY="143.0" prefHeight="25.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>
